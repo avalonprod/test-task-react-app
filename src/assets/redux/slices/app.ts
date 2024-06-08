@@ -18,7 +18,7 @@ export const appSlice = createSlice({
       state.comments.push(action.payload)
     },
     selectOption: (state, action) => {
-      state.selectedOption = action.payload
+      state.selectedOption = action.payload 
     }
   }
 })
