@@ -1,7 +1,7 @@
-import { CheckCode } from "./assets/components/CheckCode"
-import { Comments } from "./assets/components/Comments"
-import { GenerationCode } from "./assets/components/GenerationCode"
-import { Options } from "./assets/components/Options"
+import { CheckCode } from "./components/CheckCode"
+import { Comments } from "./components/Comments"
+import { GenerationCode } from "./components/GenerationCode"
+import { Options } from "./components/Options"
 
 function App() {
 
