@@ -11,16 +11,17 @@ export const Comments = () => {
   const { comments }: appState = useSelector((state: RootState) => state.app)
 
   const dispatch = useDispatch()
-
-
+  // Validates and adds comments to the global state
   const handleSubmit = (e: FormEvent) =>{
     e.preventDefault()
-    dispatch(addComment(commentVal))
-    setCommentVal('')
+    if (commentVal.length) {
+      dispatch(addComment(commentVal))
+      setCommentVal('')
+    }
   }
 
   return (
-    <form className="col-span-2 flex flex-col gap-6  p-4 border rounded-xl" onSubmit={handleSubmit}>
+    <form className="col-span-1 flex flex-col gap-6  p-4 border rounded-xl sm:col-span-2" onSubmit={handleSubmit}>
       <div className="flex flex-col gap-4">
         {comments.map((item, i) =>{
           return <div className="p-3 border border-1 rounded-lg bg-indigo-50 text-indigo-900 border-indigo-400" key={i}>{item}</div>
